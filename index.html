@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="appTasks.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="container p-4 d-flex justify-content-center flex-column align-items-center" style="direction: rtl">
+      <h1 class="display-2 text-center mb-3">מאגר משימות 2222222222222222222222</h1>
+      <div class="form-floating mb-3 w-50 border border-2 border-secondary">
+        <input
+          id="input_task"
+          type="text"
+          class="form-control"
+          placeholder="תאור המשימה"
+        />
+        <label for="input_task">שם משימה</label>
+      </div>
+      <div class="form-floating mb-3 w-50 border border-2 border-secondary">
+        <input
+          id="input_hour"
+          type="number"
+          class="form-control"
+          placeholder="שעת ביצוע המשימה"
+        />
+        <label for="input_hour">שעת ביצוע משימה</label>
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto mb-4">
+        <button id="buttonOK" class="btn btn-outline-success" type="button">הוספה</button>
+        <button  id="reset_btn" class="btn btn-outline-secondary" type="button">RESET</button>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">מספר זיהוי</th>
+            <th scope="col">שעה לביצוע</th>
+            <th scope="col">משימה</th>
+          </tr>
+        </thead>
+        <tbody id="id_parent"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
